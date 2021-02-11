@@ -66,8 +66,6 @@ int main(int argc, char** argv) {
     BinarySearch<int> int_bs(int_input, size);
     // int_bs.dump();
 
-    int_bs.iterative_search(int_input[0]);
-
     std::cout << "Iterative search on " << int_input[0] << ": " << int_bs.iterative_search(int_input[0]) << std::endl;
     std::cout << "Recursive search on " << int_input[3] << ": " << int_bs.recursive_search(int_input[3]) << std::endl;
 
