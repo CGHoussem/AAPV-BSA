@@ -63,17 +63,19 @@ int main(int argc, char** argv) {
     }
     #pragma endregion DoubleArrayCreation
 
-    BinarySearch int_bs = BinarySearch(int_input, size, INTEGER);
+    BinarySearch<int> int_bs(int_input, size);
     // int_bs.dump();
 
-    std::cout << "Iterative search on " << int_input[0] << ": " << int_bs.iterative_search_int(int_input[0]) << std::endl;
-    std::cout << "Recursive search on " << int_input[3] << ": " << int_bs.recursive_search_int(int_input[3]) << std::endl;
+    int_bs.iterative_search(int_input[0]);
 
-    BinarySearch double_bs = BinarySearch(double_input, size, DOUBLE);
+    std::cout << "Iterative search on " << int_input[0] << ": " << int_bs.iterative_search(int_input[0]) << std::endl;
+    std::cout << "Recursive search on " << int_input[3] << ": " << int_bs.recursive_search(int_input[3]) << std::endl;
+
+    BinarySearch<double> double_bs(double_input, size);
     // double_bs.dump();
 
-    std::cout << "Iterative search on " << double_input[0] << ": " << double_bs.iterative_search_double(double_input[0]) << std::endl;
-    std::cout << "Recursive search on " << double_input[3] << ": " << double_bs.recursive_search_double(double_input[3]) << std::endl;
+    std::cout << "Iterative search on " << double_input[0] << ": " << double_bs.iterative_search(double_input[0]) << std::endl;
+    std::cout << "Recursive search on " << double_input[3] << ": " << double_bs.recursive_search(double_input[3]) << std::endl;
 
     return EXIT_SUCCESS;
 }

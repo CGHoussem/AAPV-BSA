@@ -1,29 +1,20 @@
 #pragma once
-#include <iostream>
 
-enum DATA_TYPE {
-    INTEGER,
-    DOUBLE
-};
-
+template <typename T>
 class BinarySearch
 {
 private:
-    DATA_TYPE dt;
-    void* ar;
+    T* ar;
     int size;
-    
-    int recursive_search_call_int(int low, int high, int x);
-    int recursive_search_call_double(int low, int high, double x);
+
+    int recursive_search_call(int low, int high, T x);
 
 public:
-    BinarySearch(void* ar, int size, DATA_TYPE dt);
+    BinarySearch(T*, int);
     ~BinarySearch();
 
-    int iterative_search_int(int x);
-    int iterative_search_double(double x);
-    int recursive_search_int(int x);
-    int recursive_search_double(double x);
+    int iterative_search(T x);
+    int recursive_search(T x);
 
     // Prints out to the standard output the array content
     void dump();
