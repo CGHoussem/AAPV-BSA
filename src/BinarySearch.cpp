@@ -5,7 +5,7 @@
 
 
 template <typename T>
-BinarySearch<T>::BinarySearch(T* ar, int size)
+BinarySearch<T>::BinarySearch(T* const& ar, int size)
 {
     this->ar = ar;
     this->size = size;
@@ -18,7 +18,7 @@ BinarySearch<T>::~BinarySearch()
 }
 
 template <typename T>
-int BinarySearch<T>::iterative_search(T x) {
+int BinarySearch<T>::iterative_search(T const& x) {
     int low = 0;
     int high = size - 1;
     while (low <= high) {
@@ -34,7 +34,7 @@ int BinarySearch<T>::iterative_search(T x) {
 }
 
 template <typename T>
-int BinarySearch<T>::recursive_search_call(int low, int high, T x) {
+int BinarySearch<T>::recursive_search_call(int low, int high, T const& x) {
     if (low > high)
         return -1;
 
@@ -48,7 +48,7 @@ int BinarySearch<T>::recursive_search_call(int low, int high, T x) {
 }
 
 template <typename T>
-int BinarySearch<T>::recursive_search(T x) {
+int BinarySearch<T>::recursive_search(T const& x) {
     return recursive_search_call(0, size - 1, x);
 }
 
