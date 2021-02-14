@@ -1,7 +1,7 @@
 # AAPV-BSA
 Algorithm Analysis &amp; Program Validation | Binary Search Algorithm
 
-Pour compiler le programme, il suffit de tapez les commandes suivantes:
+Pour compiler le programme, il suffit de taper les commandes suivantes:
 ```bash
 # Naviguer à la repertoire du programme
 $ cd AAPV-BSA/
@@ -11,9 +11,12 @@ $ mkdir build
 
 # Compiler le code source en utilsant CMAKE
 $ cmake ..
+
+# Construire le fichier binaire
+$ build
 ```
 
-Après avoir compiler le code source avec succés, vous pouvez l'exécuter en tapons cette commande:
+Après avoir compilé le code source avec succès, vous pouvez l'exécuter, en tapant cette commande:
 ```bash
 # Il faut saisir le nombre d'itérations voulu
 $ ./AAPV-BSA [iterations]
