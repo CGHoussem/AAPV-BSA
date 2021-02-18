@@ -1,44 +1,44 @@
 # AAPV-BSA
 Algorithm Analysis &amp; Program Validation | Binary Search Algorithm
 
-Pour compiler le programme, il suffit de taper les commandes suivantes:
+To compile the code, you should execute these following commands:
 ```bash
-# Naviguer à la repertoire du programme
+# Navigate to the directory of the program
 $ cd AAPV-BSA/
 
-# Créer une répertoire nommé 'build'
+# Create a directory named 'build'
 $ mkdir build
 
-# Compiler le code source en utilsant CMAKE
+# Compile using CMAKE
 $ cmake ..
 
-# Construire le fichier binaire
+# Build the binary file
 $ build
 ```
 
-Après avoir compilé le code source avec succès, vous pouvez l'exécuter, en tapant cette commande:
+After a successful build, you could execute the binary file, by typing the following command:
 ```bash
-# Il faut saisir le nombre d'itérations voulu
+# The number of iterations is mandatory
 $ ./AAPV-BSA [iterations]
 ```
 
-Vous pouvez également et c'est plutôt recommandé de rediriger la sortie du programme vers un fichier et non pas la sortie standard (par défaut):
+You can redirect the output the results of the execution to a seperate file for future reference (maybe):
 ```bash
-$ ./AAPV-BSA [iterations] > 'nom_du_fichier_de_sortie'
+$ ./AAPV-BSA [iterations] > 'output_filename'
 ```
 
 ---
 
-Tableau de correspondance entre le nombre d'itérations choisi et la mémoire qui sera utilisé par le programme.   
-Types/Itérations|1|2|3|4|5|6|7|8|9|10
+Table of correspondence between the number of iterations chosen and the memory that will be allocated by the program.
+Types/Iterations|1|2|3|4|5|6|7|8|9|10
 ---|---|---|---|---|---|---|---|---|---|---
-Entier|2 MB|4 MB|8 MB|16 MB|32 MB|64 MB|128 MB|256 MB|1 GB|2 GB
+Integer|2 MB|4 MB|8 MB|16 MB|32 MB|64 MB|128 MB|256 MB|1 GB|2 GB
 Double Flotttans|4 MB|8 MB|16 MB|32 MB|64 MB|128 MB|256 MB|1 GB|2 GB|4 GB
 **Total**|6 MB|12 MB|24 MB|48 MB|96 MB|192 MB|374 MB|1.25 GB |3 GB|6 GB
 
 ---
 
-Quelques exemples:
+Examples:
 ```bash
 $ ./AAPV-BSA 2
 Integers: 2097152 Bytes (2 MBytes)
